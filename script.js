@@ -1,5 +1,6 @@
 /*
 	Copyright (c) 2011 Theis Mackeprang (http://www.5p.dk/)
+        Copyright (c) 2011 FLorian Mounier (http://paradoxxxzero.tk/)
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -43,6 +44,8 @@ var shortcuts = {
 	'CTRL-R': {'h': 'Reverse I-search links', 'f': function(e) { searchLinks(e, 0) } },
 	'CTRL-ALT-R': {'h': 'Reverse regexp I-search links', 'f': function(e) { searchLinks(e, 1) } },
 	'CTRL-J': {'h': 'Jump to link or form control', 'f': function(e) { jumpTo(e) } },
+        // Fix for chrome under linux
+	'CTRL-Y': {'h': 'Jump to link or form control', 'f': function(e) { jumpTo(e) } },
 	// native functions
 	'BACKSPACE': {'h': 'Previous page in history', 'f': function(e) { log("Hmm.. How did you get here?") } },
 	'CTRL-T': {'h': 'New tab', 'f': function(e) { chrome.extension.sendRequest({'action':'NEW_TAB'}) } },
