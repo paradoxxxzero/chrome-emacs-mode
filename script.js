@@ -434,6 +434,7 @@ var searchLinks = function(e, reg) {
 				links[marked].classList.remove("emacsHighlightLinksSelected");
 				marked = (marked+1) % links.length;
 				links[marked].classList.add("emacsHighlightLinksSelected");
+                                document.body.scrollTop = document.getElementsByClassName("emacsHighlightLinksSelected")[0].offsetTop;
 			}
 		}
 		if (input == "CTRL-R" || input == "CTRL-ALT-R") {
@@ -444,6 +445,7 @@ var searchLinks = function(e, reg) {
 				marked = (marked-1) % links.length;
 				if (marked < 0) marked += links.length;
 				links[marked].classList.add("emacsHighlightLinksSelected");
+                                document.body.scrollTop = document.getElementsByClassName("emacsHighlightLinksSelected")[0].offsetTop;
 			}
 		}
 	    return null;
